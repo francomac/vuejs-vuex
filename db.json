@@ -231,6 +231,21 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 507032,
+      "user": {
+        "id": "abc123",
+        "name": "franco"
+      },
+      "category": "animal welfare",
+      "organizer": "franco",
+      "title": "eee",
+      "description": "wewerw",
+      "location": "here",
+      "date": "2022-02-25T23:41:00.000Z",
+      "time": "2:00",
+      "attendees": []
     }
   ]
 }
