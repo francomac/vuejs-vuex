@@ -246,6 +246,21 @@
       "date": "2022-02-25T23:41:00.000Z",
       "time": "2:00",
       "attendees": []
+    },
+    {
+      "id": 973115,
+      "user": {
+        "id": "abc123",
+        "name": "franco"
+      },
+      "category": "animal welfare",
+      "organizer": "franco",
+      "title": "HOOO",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
