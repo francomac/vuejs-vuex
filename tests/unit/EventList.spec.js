@@ -2,6 +2,8 @@ import Vuex from 'vuex'
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import EventList from '@/views/EventList.vue'
 
+let wrapper
+
 beforeEach(() => {
   const localVue = createLocalVue()
 
@@ -58,7 +60,7 @@ beforeEach(() => {
     }
   }
 
-  let wrapper = mount(EventList, {
+  wrapper = mount(EventList, {
     localVue,
     stubs: {
       RouterLink: RouterLinkStub,
@@ -72,5 +74,11 @@ beforeEach(() => {
 })
 
 describe('EventList', () => {
-  it('should displays a specific title', () => {})
+  it('should displays a specific title', () => {
+    const name = 'alice'
+    const title = wrapper.find("[data-testid=eventListTitle]")
+    expect(title.exists()).toBeTruthy()
+
+    expect(title.text()).toEqual(`Events for ${name}`)
+  })
 })

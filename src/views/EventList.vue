@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Events for {{ user.user.name }}</h1>
+    <h1 data-testid="eventListTitle">Events for {{ user.user.name }}</h1>
     <router-link
       class="event-link"
       :to="{ name: 'event-show', params: { id: event.id } }"
