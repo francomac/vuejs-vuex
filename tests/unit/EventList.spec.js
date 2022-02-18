@@ -82,8 +82,9 @@ describe('EventList', () => {
       wrapper = mountEventList()
 
       await flushPromises()
-      
-      console.log(wrapper.vm.$store._modules.root.state.event)
+
+      console.log(wrapper.vm.$store.state.user.user.name)
+      console.log(wrapper.vm.$store.state.event.events)
 
       expect(wrapper.findAllComponents(EventCard).length).toBe(
         mockEvents.length
