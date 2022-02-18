@@ -57,17 +57,17 @@ let wrapper
 
 beforeEach(() => {
   jest.resetAllMocks()
+  wrapper = mountEventList()
 })
 
 describe('EventList', () => {
   it('should render the events list component', () => {
-    wrapper = mountEventList()
+    
     expect(wrapper.exists()).toBeTruthy()
   })
 
   describe('page title', () => {
     it('should displays a specific text', () => {
-      wrapper = mountEventList()
       const name = 'franco'
       const title = wrapper.find('[data-testid=eventListTitle]')
 
@@ -79,12 +79,11 @@ describe('EventList', () => {
 
   describe('events', () => {
     it('are rendered in a list', async () => {
-      wrapper = mountEventList()
 
       await flushPromises()
 
       console.log(wrapper.vm.$store.state.user.user.name)
-      console.log(wrapper.vm.$store.state.event.events)
+      console.log(wrapper.vm.$store.state.event.events[0].title)
 
       expect(wrapper.findAllComponents(EventCard).length).toBe(
         mockEvents.length
